@@ -1,4 +1,3 @@
-import pandas as pd
 import streamlit as st
 from st_supabase_connection import SupabaseConnection
 
@@ -11,5 +10,5 @@ rows = conn.query("*", table="mytable", ttl="10m").execute()
 # Print results.
 for row in rows.data:
     st.write(f"{row['name']} has a :{row['pet']}:")
-
+    
 st.title("Title")
